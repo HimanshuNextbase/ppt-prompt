@@ -1106,6 +1106,113 @@ tr:last-child td {
     border-radius: 8px;
 }
 
+/* ---------- GIF stickers (emotional design) ---------- */
+.gif-sticker {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    z-index: 6; /* above backgrounds, below nav controls */
+    border-radius: 10px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* Slide 05 */
+.gif-key {
+    width: 110px;
+    bottom: 84px;
+    left: 54px;
+    transform: rotate(-6deg);
+    opacity: 0.95;
+}
+
+/* Slide 06 */
+.slide-6 .bg-red-900\/20 { position: relative; }
+.gif-girl-rage {
+    width: 92px;
+    top: 12px;
+    right: 12px;
+    opacity: 0.92;
+}
+
+/* Slide 11 */
+.gif-important {
+    width: 120px;
+    right: 56px;
+    bottom: 96px;
+    transform: rotate(4deg);
+    opacity: 0.9;
+}
+
+.gif-robot-comfort {
+    width: 120px;
+    left: 56px;
+    bottom: 96px;
+    transform: rotate(-4deg);
+    opacity: 0.9;
+}
+
+/* Slide 20 */
+.slide-20 .highlight-box { position: relative; }
+.gif-ben-no {
+    width: 96px;
+    right: 16px;
+    top: 16px;
+    opacity: 0.95;
+}
+
+/* Slide 26 */
+.gif-pikachu {
+    width: 120px;
+    left: 70px;
+    bottom: 90px;
+    opacity: 0.95;
+}
+
+.gif-thinking-bear {
+    width: 140px;
+    right: 70px;
+    bottom: 78px;
+    opacity: 0.95;
+}
+
+/* Slide 29 */
+.slide-29 .highlight-box { position: relative; }
+.gif-sherlock {
+    width: 120px;
+    top: 16px;
+    right: 16px;
+    border-radius: 50%;
+    opacity: 0.95;
+}
+
+/* Slide 30 */
+.gif-friend-night {
+    width: 220px;
+    bottom: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+}
+
+/* Slide 34 */
+.gif-kevin {
+    width: 220px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.92;
+}
+
+/* Slide 35 */
+.gif-skol {
+    width: 140px;
+    bottom: 70px;
+    right: 70px;
+    border-radius: 50%;
+    opacity: 0.95;
+}
+
 /* Utility */
 .text-accent {
     color: var(--accent-secondary);
