@@ -133,14 +133,14 @@
       <div class="two-col">
         <div>
           <p class="mb-4"><strong>Definition:</strong><br>
-            A prompt is the instruction, question, or example we give to AI 
+            A prompt is the instruction, question, or example we give to AI
             to guide what it learns and how it responds.
           </p>
           <div class="highlight-box fragment" style="border-left: 4px solid var(--accent-secondary);">
-             <p style="font-size: 1.5rem;"><strong>Prompt = Instruction</strong></p>
+            <p style="font-size: 1.5rem;"><strong>Prompt = Instruction</strong></p>
           </div>
         </div>
-        
+
         <div class="learning-visual-container">
           <!-- Step 1: Human Learning -->
           <div class="learning-step human-learning">
@@ -148,7 +148,7 @@
             <p>Human Learning</p>
             <div class="learning-bubble">"Study this book..."</div>
           </div>
-          
+
           <!-- Step 2: AI Learning (Fades in) -->
           <div class="learning-step ai-learning fragment">
             <div class="learning-icon">🤖</div>
@@ -538,7 +538,7 @@ EXCLUDE: text, borders, watermarks, artifacts</code></pre>
       <p>A simple meta-rule to save time and tokens.</p>
       <div class="highlight-box" style="margin-top: 2rem; display: inline-block; text-align: left;">
         <p>"Refine my request into the best possible prompt.
-         "</p>
+          "</p>
         <p style="color: var(--accent-secondary); margin-top: 1rem;">"...give me the final prompt only."</p>
       </div>
       <p style="margin-top: 1rem; opacity: 0.7;">Prevents the AI from giving you a lecture on <em>how</em> it improved
@@ -610,14 +610,33 @@ Write a script to scrape data from example.com.
     <!-- Slide 27: Style & Variations -->
     <div class="slide slide-27">
       <h3>Technique 4</h3>
-      <h2>Style & Variations</h2>
-      <p>Never settle for the first draft.</p>
-      <div class="highlight-box" style="margin-top: 1rem;">
-        <ul>
-          <li>"Give me 5 distinctive variations of this headline."</li>
-          <li>"Rewrite this to be more punchy and less formal."</li>
-          <li>"Explain the same concept in a poetic style."</li>
-        </ul>
+      <h2>Values of Iteration</h2>
+      <p style="font-size: 1.4rem; max-width: 1000px; margin-bottom: 0.5rem; color: #d1d5db;">Prompting is a loop of trial & error. If one angle doesn't work, pivot to another.</p>
+
+      <div class="three-col-cards">
+        <!-- Angle 1 -->
+        <div class="angle-card fragment">
+          <div class="angle-icon">📐</div>
+          <div class="angle-title">The Logic Angle</div>
+          <p class="angle-text">Direct, step-by-step instructions. <br>Best for code & data.</p>
+          <div class="angle-example">"Solve this step-by-step..."</div>
+        </div>
+
+        <!-- Angle 2 -->
+        <div class="angle-card fragment" style="transition-delay: 100ms;">
+          <div class="angle-icon">🎨</div>
+          <div class="angle-title">The Creative Angle</div>
+          <p class="angle-text">Using metaphors and vibes. <br>Best for writing & art.</p>
+          <div class="angle-example">"Explain APIs using a restaurant metaphor..."</div>
+        </div>
+
+        <!-- Angle 3 -->
+        <div class="angle-card fragment" style="transition-delay: 200ms;">
+          <div class="angle-icon">🎭</div>
+          <div class="angle-title">The Persona Angle</div>
+          <p class="angle-text">Adopting a specific expert voice. <br>Best for specific advice.</p>
+          <div class="angle-example">"Act as a cynical editor..."</div>
+        </div>
       </div>
       <div class="big-number">27</div>
     </div>
