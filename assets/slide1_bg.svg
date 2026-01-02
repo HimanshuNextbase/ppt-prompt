@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="15%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.40"/>
+      <stop offset="55%" stop-color="#6366f1" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="88%" cy="78%" r="60%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.30"/>
+      <stop offset="55%" stop-color="#ec4899" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.12 0" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#glowA)"/>
+  <rect width="100%" height="100%" fill="url(#glowB)"/>
+  <rect width="100%" height="100%" filter="url(#grain)" opacity="0.25"/>
+  <rect x="345" y="194" width="1228" height="691" fill="#000" opacity="0.10" rx="48"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 1832 74 L 1766 353" stroke="#6366f1" stroke-width="1" opacity="0.08544765335532878"/>
+    <path d="M 1712 282 L 2209 404" stroke="#ec4899" stroke-width="1" opacity="0.2035428910915422"/>
+    <path d="M 161 26 L -282 106" stroke="#6366f1" stroke-width="1" opacity="0.17702607471108095"/>
+    <path d="M 596 666 L 533 364" stroke="#a5b4fc" stroke-width="1" opacity="0.19475729399908298"/>
+    <path d="M 1152 1009 L 1025 1353" stroke="#ec4899" stroke-width="2" opacity="0.09161262230188234"/>
+    <path d="M 1413 1014 L 1176 1168" stroke="#6366f1" stroke-width="1" opacity="0.14819419044737425"/>
+    <path d="M 320 185 L 828 406" stroke="#ec4899" stroke-width="1" opacity="0.1953194998068174"/>
+    <path d="M 768 953 L 516 805" stroke="#ec4899" stroke-width="2" opacity="0.1787505629611548"/>
+    <path d="M 1318 1017 L 1083 656" stroke="#6366f1" stroke-width="1" opacity="0.11546604893655102"/>
+    <path d="M 481 929 L -16 658" stroke="#a5b4fc" stroke-width="1" opacity="0.21399950814184093"/>
+    <path d="M 662 2 L 448 -133" stroke="#ec4899" stroke-width="1" opacity="0.15891993846367203"/>
+    <path d="M 143 233 L -78 489" stroke="#6366f1" stroke-width="2" opacity="0.11370547514216088"/>
+    <path d="M 1387 937 L 2018 784" stroke="#ec4899" stroke-width="1" opacity="0.14324129744591935"/>
+    <path d="M 1873 155 L 2415 241" stroke="#6366f1" stroke-width="1" opacity="0.13176620162722252"/>
+    <path d="M 231 820 L -93 1073" stroke="#a5b4fc" stroke-width="2" opacity="0.16872451847225373"/>
+    <path d="M 44 324 L 322 239" stroke="#ec4899" stroke-width="1" opacity="0.11099625284600217"/>
+    <path d="M 464 894 L 327 818" stroke="#a5b4fc" stroke-width="1" opacity="0.14276417933178315"/>
+    <path d="M 539 151 L -29 148" stroke="#a5b4fc" stroke-width="1" opacity="0.10280585146107069"/>
+  </g>
+  <g>
+    <circle cx="1832" cy="74" r="2" fill="#6366f1" opacity="0.24517458714454402"/>
+    <circle cx="1766" cy="353" r="4" fill="#6366f1" opacity="0.21532994974125236"/>
+    <circle cx="1712" cy="282" r="2" fill="#ec4899" opacity="0.2506447017480873"/>
+    <circle cx="2209" cy="404" r="2" fill="#ec4899" opacity="0.3285290797354968"/>
+    <circle cx="596" cy="666" r="3" fill="#a5b4fc" opacity="0.1558970597144114"/>
+    <circle cx="1152" cy="1009" r="2" fill="#ec4899" opacity="0.13320606833277285"/>
+    <circle cx="1413" cy="1014" r="2" fill="#6366f1" opacity="0.1595421697644132"/>
+    <circle cx="1176" cy="1168" r="3" fill="#6366f1" opacity="0.1577653533285265"/>
+    <circle cx="768" cy="953" r="3" fill="#ec4899" opacity="0.2546756744193222"/>
+    <circle cx="1083" cy="656" r="2" fill="#6366f1" opacity="0.2781286603618396"/>
+    <circle cx="481" cy="929" r="3" fill="#a5b4fc" opacity="0.2588155269425143"/>
+    <circle cx="-16" cy="658" r="4" fill="#a5b4fc" opacity="0.17102585463311734"/>
+    <circle cx="662" cy="2" r="2" fill="#ec4899" opacity="0.34351026962660003"/>
+    <circle cx="448" cy="-133" r="2" fill="#ec4899" opacity="0.14735401393314307"/>
+    <circle cx="143" cy="233" r="2" fill="#6366f1" opacity="0.14219362102583394"/>
+    <circle cx="1387" cy="937" r="2" fill="#ec4899" opacity="0.24461723365721416"/>
+    <circle cx="2018" cy="784" r="2" fill="#ec4899" opacity="0.28068595268349983"/>
+    <circle cx="1873" cy="155" r="3" fill="#6366f1" opacity="0.13868301115219656"/>
+    <circle cx="2415" cy="241" r="4" fill="#6366f1" opacity="0.3078792382240566"/>
+    <circle cx="-93" cy="1073" r="3" fill="#a5b4fc" opacity="0.22684612581611513"/>
+    <circle cx="44" cy="324" r="2" fill="#ec4899" opacity="0.34084693954599377"/>
+    <circle cx="322" cy="239" r="4" fill="#ec4899" opacity="0.19267684952383943"/>
+    <circle cx="464" cy="894" r="3" fill="#a5b4fc" opacity="0.18062193678006816"/>
+    <circle cx="327" cy="818" r="4" fill="#a5b4fc" opacity="0.28356698807231967"/>
+  </g>
+  <g fill="#ffffff">
+    <rect x="1726" y="589" width="203" height="111" rx="27" opacity="0.05906792886198502"/>
+    <rect x="1471" y="721" width="198" height="120" rx="30" opacity="0.079780951493121"/>
+    <rect x="1322" y="754" width="222" height="154" rx="38" opacity="0.05036307941498214"/>
+    <rect x="1252" y="769" width="201" height="117" rx="29" opacity="0.0707665837719186"/>
+    <rect x="1464" y="222" width="190" height="151" rx="37" opacity="0.08934947018901107"/>
+  </g>
+  <!-- generated_at: 2026-01-02T02:38:11Z; prompt_seed: Abstract futuristic neon glassmorphism background for a presentation cover slide about prompt engineering. Dark black background with subtle grain, glowing purple indigo and pink gradients, thin circuit and flow lines, faint chat bubbles and typing cursor motif, minimal, high contrast, lots of empty center space for title text, no words, no logos, professional tech keynote vibe. -->
+</svg>

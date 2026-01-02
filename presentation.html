@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Art of Prompt Engineering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div class="presentation-container">
+
+    <!-- Slide 1: Title -->
+    <div class="slide active center-slide title-slide">
+      <h1 style="font-size: 5rem; margin-bottom: 1rem;">The Art of<br>Prompt Engineering</h1>
+      <p style="font-size: 1.5rem; color: #a5b4fc;">How to Talk to AI and Get Exactly What You Want</p>
+      <p style="font-size: 1.2rem; color: #d1d5db; opacity: 0.85; margin-top: 0.75rem;">- AI Team</p>
+      <div class="big-number">01</div>
+    </div>
+
+    <!-- Slide 2: What is AI? -->
+    <div class="slide slide-2">
+      <h3>Introduction</h3>
+      <h2>What is AI?</h2>
+      <div class="two-col">
+        <div>
+          <div class="highlight-box reframe-box" style="margin-bottom: 1.5rem;">
+            <div class="reframe-negative-wrap">
+              <p class="reframe-text reframe-negative">AI replaces humans</p>
+              <div class="reframe-strike fragment" aria-hidden="true"></div>
+            </div>
+            <div class="reframe-divider" aria-hidden="true"></div>
+            <p class="reframe-text reframe-positive fragment">✅ AI assists humans</p>
+          </div>
+          <ul>
+            <li><strong>Definition:</strong> AI is the art of making machines smart enough to help humans.</li>
+            <li>Machines that can <strong>think</strong>, <strong>learn</strong>, and <strong>create</strong> — similar to
+              humans.</li>
+            <li><strong>It’s not magic,</strong> it’s math + data + feedback.</li>
+          </ul>
+        </div>
+        <div class="highlight-box">
+          <h4 style="color:#fff; margin-bottom:1rem;">Generative Types</h4>
+          <div style="font-size: 1rem;">
+            <div style="margin-bottom: 1.25rem;">
+              <div style="margin-bottom: 0.5rem;">📝 <strong>Text</strong></div>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+                <span class="tag fragment">GPT 5.2</span>
+                <span class="tag fragment">Gemini 3 Pro</span>
+                <span class="tag fragment">Gemini 3 Flash</span>
+                <span class="tag fragment">Claude Opus 4.5</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <div style="margin-bottom: 0.5rem;">🖼️ <strong>Image</strong></div>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+                <span class="tag fragment">Nano Banana</span>
+                <span class="tag fragment">Nano Banana Pro</span>
+                <span class="tag fragment">GPT-Image 1.5</span>
+                <span class="tag fragment">Z-Image Turbo</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <div style="margin-bottom: 0.5rem;">🎵 <strong>Audio</strong></div>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+                <span class="tag fragment">ElevenLabs</span>
+                <span class="tag fragment">Suno</span>
+                <span class="tag fragment">AudioGen</span>
+              </div>
+            </div>
+
+            <div>
+              <div style="margin-bottom: 0.5rem;">🎥 <strong>Video</strong></div>
+              <div style="display:flex; flex-wrap:wrap; gap: 0.5rem;">
+                <span class="tag fragment">Google Veo 3.1</span>
+                <span class="tag fragment">Sora 2 (OpenAI)</span>
+                <span class="tag fragment">Kling O1</span>
+                <span class="tag fragment">Wan 2.6</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="big-number">02</div>
+    </div>
+
+    <!-- Slide 3: How AI Works -->
+    <div class="slide slide-3">
+      <h3>Context</h3>
+      <h2>How AI Works</h2>
+      <div class="ai-flow" role="presentation" aria-label="Training data to model learning to generation">
+        <div class="ai-flow-step">
+          <div class="ai-flow-icon">📚</div>
+          <div class="ai-flow-label">Training Data<br>(Internet)</div>
+        </div>
+        <div class="ai-flow-arrow" aria-hidden="true">→</div>
+        <div class="ai-flow-step">
+          <div class="ai-flow-icon">🧠</div>
+          <div class="ai-flow-label">Model Learning<br>(Patterns)</div>
+        </div>
+        <div class="ai-flow-arrow" aria-hidden="true">→</div>
+        <div class="ai-flow-step">
+          <div class="ai-flow-icon">✨</div>
+          <div class="ai-flow-label">Generation<br>(Prediction)</div>
+        </div>
+      </div>
+      <p class="ai-flow-caption">It predicts the next likely piece of information based on patterns it learned.</p>
+      <div class="big-number">03</div>
+    </div>
+
+    <!-- Slide 4: What is a Prompt? -->
+    <div class="slide slide-4">
+      <h3>Basics</h3>
+      <h2>What is a Prompt?</h2>
+      <div class="two-col">
+        <div>
+          <p class="mb-4"><strong>Definition:</strong><br>
+            A prompt is the instruction, question, or example we give to AI 
+            to guide what it learns and how it responds.
+          </p>
+          <div class="highlight-box fragment" style="border-left: 4px solid var(--accent-secondary);">
+             <p style="font-size: 1.5rem;"><strong>Prompt = Instruction</strong></p>
+          </div>
+        </div>
+        
+        <div class="learning-visual-container">
+          <!-- Step 1: Human Learning -->
+          <div class="learning-step human-learning">
+            <div class="learning-icon">👨‍🏫</div>
+            <p>Human Learning</p>
+            <div class="learning-bubble">"Study this book..."</div>
+          </div>
+          
+          <!-- Step 2: AI Learning (Fades in) -->
+          <div class="learning-step ai-learning fragment">
+            <div class="learning-icon">🤖</div>
+            <p>AI Learning</p>
+            <div class="learning-bubble">"Analyze this data..."</div>
+          </div>
+        </div>
+      </div>
+      <div class="big-number">04</div>
+    </div>
+
+    <!-- Slide 5: What is Prompt Engineering? -->
+    <div class="slide slide-5">
+      <h3>The Skill</h3>
+      <h2>What is Prompt Engineering?</h2>
+      <p style="font-size: 1.5rem; max-width: 900px; margin: 0 auto 1.5rem 0;">
+        Prompt Engineering is the skill of giving <strong>clear, structured instructions</strong> to AI
+        so it produces useful, accurate, and predictable results.
+      </p>
+
+
+      <div class="two-col" style="text-align: left;">
+        <div class="highlight-box">
+          <strong class="text-primary">Casual Prompting</strong>
+          <p>"Make a plan for me."</p>
+          <p style="opacity:0.6; font-size: 0.9em;">Result: Generic, unhelpful.</p>
+        </div>
+        <div class="highlight-box" style="border-color: var(--accent-secondary);">
+          <strong class="text-accent">Engineered Prompt</strong>
+          <p>"Create a 4-week study plan for Python..."</p>
+          <p style="opacity:0.6; font-size: 0.9em;">Result: Specific, actionable, tailored.</p>
+        </div>
+      </div>
+
+      <p class="bottom-quote fragment">"Don’t blame the model — fix the prompt." 😄</p>
+      <div class="big-number">05</div>
+    </div>
+
+    <!-- Slide 6: Good vs Bad Prompts -->
+    <div class="slide slide-6">
+      <h3>Comparison</h3>
+      <h2>Good vs Bad Prompts</h2>
+      <div class="bad-good-comparison">
+        <div class="bg-red-900/20">
+          <h4 style="color: #f87171; margin-bottom: 0.5rem;">❌ Bad Prompt</h4>
+          <p style="font-family: monospace;">"Write something about dogs"</p>
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+          <p style="font-size: 0.9em; opacity: 0.8;">Output: Generic facts, random Wikipedia-style summary.</p>
+        </div>
+        <div class="bg-green-900/20">
+          <h4 style="color: #4ade80; margin-bottom: 0.5rem;">✅ Good Prompt</h4>
+          <p style="font-family: monospace;">"Write a 100-word blog intro about 3 health benefits of owning a dog"</p>
+          <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+          <p style="font-size: 0.9em; opacity: 0.8;">Output: Engaging, specific, formatted, and ready to use.</p>
+        </div>
+      </div>
+      <div class="big-number">06</div>
+    </div>
+
+    <!-- Slide 7: Section Divider - The Friend Analogy -->
+    <div class="slide slide-7 center-slide section-title">
+      <div style="font-size: 6rem; margin-bottom: 1rem;">🤝</div>
+      <h2>The Friend Analogy</h2>
+      <p>Think of AI as a very smart (but literal) friend.</p>
+      <div class="big-number">07</div>
+    </div>
+
+    <!-- Slide 8: New Friend vs Old Friend -->
+    <div class="slide slide-8">
+      <h3>Context Matters</h3>
+      <h2>New Friend vs Old Friend</h2>
+      <div class="two-col">
+        <div class="friend-card">
+          <img src="assets/new_friend.png" alt="New Friend" class="friend-img">
+          <h4 class="text-primary mb-4">New Friend (No Context)</h4>
+          <p class="mb-4">"What should I eat?"</p>
+          <p style="opacity: 0.7;">→ Does not know you like spicy food.</p>
+          <p class="friend-status">"Not wrong, but not helpful"</p>
+        </div>
+        <div class="friend-card fragment">
+          <img src="assets/old_friend.png" alt="Old Friend" class="friend-img">
+          <h4 class="text-accent mb-4">Old Friend (With Context)</h4>
+          <p class="mb-4">"What should I eat?"</p>
+          <p style="opacity: 0.7;">→ "Since you love spicy noodles, try that new ramen place!"</p>
+        </div>
+      </div>
+      <div class="big-number">08</div>
+    </div>
+
+    <!-- Slide 9: Good Friend vs Bad Friend (Content) -->
+    <div class="slide slide-9">
+      <h3>Model Quality</h3>
+      <h2>Good Friend vs Bad Friend</h2>
+      <div class="two-col">
+        <div class="friend-card-text">
+          <h4 style="color: #fca5a5;" class="mb-4">🔴 Bad Friend (Low-Quality)</h4>
+          <ul style="font-size: 1.1rem; text-align: left;">
+            <li>Gives quick but shallow answers</li>
+            <li>Often overconfident and wrong</li>
+            <li>Struggles with complex or nuanced questions</li>
+          </ul>
+          <p class="friend-takeaway" style="color: #fca5a5; margin-top: 1.5rem;">👉 Sounds confident, but doesn’t really think.</p>
+          <div style="margin-top: auto; padding-top: 1rem; opacity: 0.6; font-style: italic;">"GPT 4o"</div>
+        </div>
+        <div class="friend-card-text fragment">
+          <h4 style="color: #4ade80;" class="mb-4">🟢 Good Friend (High-Quality)</h4>
+          <ul style="font-size: 1.1rem; text-align: left;">
+            <li>Understands context better</li>
+            <li>Thinks step by step</li>
+            <li>Handles complex, creative, and logical tasks</li>
+          </ul>
+          <p class="friend-takeaway" style="color: #4ade80; margin-top: 1.5rem;">👉 Asks the right questions and reasons things out.</p>
+          <div style="margin-top: auto; padding-top: 1rem; opacity: 0.6; font-style: italic;">"GPT 5.2"</div>
+        </div>
+      </div>
+      <div class="big-number">09</div>
+    </div>
+
+    <!-- Slide 10: Model Comparison (Visual) -->
+    <div class="slide slide-10">
+      <h3>Model Quality</h3>
+      <h2>Visual Comparison</h2>
+      <div class="two-col-large">
+        <div class="screenshot-card">
+          <p style="color: #fca5a5; margin-bottom: 0.5rem; font-weight: bold;">Bad Friend Output (GPT 4o)</p>
+          <div class="screenshot-container-large">
+            <img src="assets/bad_friend.png" alt="Bad Friend Output" class="screenshot-img-large">
+          </div>
+          <!-- Second example below -->
+          <div class="screenshot-container-large fragment" style="margin-top: 1rem; height: 180px;">
+            <img src="assets/bad_friendd.png" alt="Bad Friend Detail" class="screenshot-img-large">
+          </div>
+        </div>
+        <div class="screenshot-card">
+          <p style="color: #4ade80; margin-bottom: 0.5rem; font-weight: bold;">Good Friend Output (GPT 5.2)</p>
+          <div class="screenshot-container-large">
+            <img src="assets/good_friend.png" alt="Good Friend Output" class="screenshot-img-large">
+          </div>
+          <!-- Second example below -->
+          <div class="screenshot-container-large fragment" style="margin-top: 1rem; height: 180px;">
+            <img src="assets/good_friendd.png" alt="Good Friend Detail" class="screenshot-img-large">
+          </div>
+        </div>
+      </div>
+      <div class="big-number">10</div>
+    </div>
+
+    <!-- Slide 10: Lazy Friend vs Active Friend -->
+    <div class="slide slide-11">
+      <h3>Effort In, Effort Out</h3>
+      <h2>Lazy Friend vs Active Friend</h2>
+      <div class="two-col">
+        <div>
+          <div style="font-size: 3rem; margin-bottom:1rem;">😴</div>
+          <h4>Lazy Prompting</h4>
+          <p>"Email to boss."</p>
+          <p class="text-accent">Garbage In.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; margin-bottom:1rem;">🏃</div>
+          <h4>Active Prompting</h4>
+          <p>"Write a formal email to my boss asking for a raise, highlighting my 3 recent project successes..."</p>
+          <p class="text-primary">Gold Out.</p>
+        </div>
+      </div>
+      <p class="bottom-tip fragment">Tips: If you want a raise, use Active Friend! 😂</p>
+      <div class="big-number">11</div>
+    </div>
+
+    <!-- Slide 12: Honest Friend -->
+    <div class="slide slide-12">
+      <h3>Hallucinations</h3>
+      <h2>Honest Friend</h2>
+      <p class="mb-8">AI wants to be helpful — sometimes too helpful.<br>
+        So when it’s unsure, it may confidently make things up.<br>
+        That’s called a hallucination.</p>
+      <div class="highlight-box">
+        <h4>Prompt to avoid hallucinations:</h4>
+        <ul style="margin-top: 1rem;">
+          <li>"If you don't know the answer for sure, tell me 'I don't know'."</li>
+          <li>"Do not make up facts."</li>
+          <li>"Answer only if you are confident."</li>
+          <li>"Ask me if you need any other info."</li>
+        </ul>
+      </div>
+      <p class="bottom-quote fragment">"A good prompt doesn’t just ask for answers — it asks for honesty."</p>
+      <div class="big-number">12</div>
+    </div>
+
+    <!-- Slide 13: Permanent Friend Benefits -->
+    <div class="slide slide-13">
+      <h3>Growth</h3>
+      <h2>Permanent Friend Benefits</h2>
+      <p>Use AI to find your blind spots.</p>
+      <div class="two-col" style="margin-top: 2rem;">
+        <div class="highlight-box">
+          <strong>Gap Analysis</strong>
+          <p style="margin-top:0.5rem; font-family:monospace; color:#a5b4fc;">"whatever you know about me tell me the gaps in my knowledge , what don’t i know , what am i missing , what are the gaps in my reasoning"</p>
+        </div>
+        <div class="highlight-box">
+          <strong>Next Steps</strong>
+          <p style="margin-top:0.5rem; font-family:monospace; color:#a5b4fc;">"based on what you know about me , what should i learn next ? "</p>
+        </div>
+      </div>
+      <div class="big-number">13</div>
+    </div>
+
+    <!-- Slide 14: Learn Anything with AI -->
+    <div class="slide slide-14">
+      <h3>Technique</h3>
+      <h2>"Explain Like I'm..."</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Target Audience</th>
+            <th>Prompt Example</th>
+            <th>Result Style</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>👒 Age 5</td>
+            <td>"Explain blockchain like I'm 5"</td>
+            <td>Simple analogies (Digital Lego)</td>
+          </tr>
+          <tr>
+            <td>🧒 Age 10</td>
+            <td>"Explain like I'm 10"</td>
+            <td>Basic logic, no jargon</td>
+          </tr>
+          <tr>
+            <td>🧑 Professional</td>
+            <td>"Explain like I'm a professional"</td>
+            <td>Practical, industry terms</td>
+          </tr>
+          <tr>
+            <td>🎓 Expert</td>
+            <td>"Explain like I'm a PhD student"</td>
+            <td>Technical deep dive, theory</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="big-number">14</div>
+    </div>
+
+    <!-- Slide 15: Emotional Connection -->
+    <div class="slide slide-15">
+      <h3>Advanced Tip</h3>
+      <h2>Emotional Connection (With Your AI Friend)</h2>
+      <p>Studies show LLMs respond to "emotional stakes".</p>
+      <div class="highlight-box" style="margin-top: 2rem;">
+        <p class="mb-4"><strong>Keywords to add:</strong></p>
+        <div style="display:flex; gap: 1rem; flex-wrap: wrap;">
+          <span class="tag">"Take a deep breath"</span>
+          <span class="tag">"Think hard"</span>
+          <span class="tag">"This is very important to me"</span>
+          <span class="tag">"Someone will pay for it"</span>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; opacity: 0.8;"><em>Example: "Your task is critical. If you provide false info, it will
+          have bad consequences." (Increases accuracy)</em></p>
+      <div class="big-number">15</div>
+    </div>
+
+    <!-- Slide 16: Section Divider - Golden Rules -->
+    <div class="slide center-slide section-title slide-16">
+      <div style="font-size: 6rem; margin-bottom: 1rem;">⚡</div>
+      <h2>Golden Rules of Prompting</h2>
+      <p>The 6 Commandments</p>
+      <div class="big-number">16</div>
+    </div>
+
+    <!-- Slide 17: Rule 1 -->
+    <div class="slide slide-17">
+      <h3>Rule 1</h3>
+      <h2>Be Clear, Not Polite</h2>
+      <div class="bad-good-comparison">
+        <div class="bg-red-900/20">
+          <p>❌ "Hi there, hope you are well. Could you maybe please help me write a..."</p>
+        </div>
+        <div class="bg-green-900/20">
+          <p>✅ "Draft a 500-word article about..."</p>
+        </div>
+      </div>
+      <p style="margin-top: 2rem;">AI doesn't have feelings. Focus on clarity and verbs.</p>
+      <div class="big-number">17</div>
+    </div>
+
+    <!-- Slide 18: Rule 2 -->
+    <div class="slide slide-18">
+      <h3>Rule 2</h3>
+      <h2>One Prompt = One Goal</h2>
+      <p>Don't overload the system.</p>
+      <div class="highlight-box" style="margin-top: 2rem;">
+        <p class="mb-4">❌ <strong>Mixed:</strong> "Create an image of a cat for me, then write a caption for it, and
+          then give me code for a website portfolio."</p>
+        <p>✅ <strong>Focused:</strong> "Write a caption for a photo of a cat." (Do the rest in separate steps)</p>
+      </div>
+      <div class="big-number">18</div>
+    </div>
+
+    <!-- Slide 19: Rule 3 -->
+    <div class="slide slide-19">
+      <h3>Rule 3</h3>
+      <h2>No Contradictions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>❌ Contradicting</th>
+            <th>✅ Clear</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Strictly preserve face AND replace face"</td>
+            <td>"Replace face, keep background"</td>
+          </tr>
+          <tr>
+            <td>"Keep it short but explain everything in detail"</td>
+            <td>"Give a concise 3-sentence summary"</td>
+          </tr>
+          <tr>
+            <td>"Be creative but follow this exact template"</td>
+            <td>"Use this template, fill in creative content"</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="big-number">19</div>
+    </div>
+
+    <!-- Slide 20: Rule 4 -->
+    <div class="slide slide-20">
+      <h3>Rule 4</h3>
+      <h2>Use STRICT / ONLY</h2>
+      <p>When requirements are non-negotiable, use capital letters for emphasis.</p>
+      <div class="two-col" style="margin-top: 2rem;">
+        <div class="highlight-box">
+          <p>"STRICTLY do not use emojis."</p>
+        </div>
+        <div class="highlight-box">
+          <p>"Output ONLY the code. No explanation."</p>
+        </div>
+      </div>
+      <div class="big-number">20</div>
+    </div>
+
+    <!-- Slide 21: Rule 5 -->
+    <div class="slide center-slide slide-21">
+      <h3>Rule 5</h3>
+      <h2>Speak If You Can't Type</h2>
+      <div style="font-size: 5rem; margin-bottom: 2rem;">🎙️</div>
+      <p>Voice input allows for "yapping" – rambling your thoughts.</p>
+      <p style="margin-top: 1rem;">Let the AI organize your messy spoken thoughts into a structured prompt.</p>
+      <div class="big-number">21</div>
+    </div>
+
+    <!-- Slide 22: Rule 6 -->
+    <div class="slide center-slide slide-22">
+      <h3>Rule 6</h3>
+      <h2>"Final Prompt Only"</h2>
+      <p>A meta-tactic.</p>
+      <div class="highlight-box" style="margin-top: 2rem; display: inline-block; text-align: left;">
+        <p>"Refine my request into the perfect prompt for ChatGPT..."</p>
+        <p style="color: var(--accent-secondary); margin-top: 1rem;">"...give me the Final Prompt Only."</p>
+      </div>
+      <p style="margin-top: 1rem; opacity: 0.7;">Prevents the AI from giving you a lecture on <em>how</em> it improved
+        it.</p>
+      <div class="big-number">22</div>
+    </div>
+
+    <!-- Slide 23: Section Divider - Powerful Techniques -->
+    <div class="slide center-slide section-title slide-23">
+      <div style="font-size: 6rem; margin-bottom: 1rem;">🧠</div>
+      <h2>Powerful Techniques</h2>
+      <p>Level Up Your Game</p>
+      <div class="big-number">23</div>
+    </div>
+
+    <!-- Slide 24: Persona/Role Technique -->
+    <div class="slide slide-24">
+      <h3>Technique 1</h3>
+      <h2>Persona / Role</h2>
+      <p class="mb-4">"Act as a..." or "You are an expert..."</p>
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Marketing:</strong> "Act as a Senior Brand Strategist with 20 years experience."</li>
+          <li><strong>Coding:</strong> "You are a Principal Software Engineer at Google."</li>
+          <li><strong>Health:</strong> "You are a professional Nutritionist."</li>
+        </ul>
+      </div>
+      <p style="margin-top: 2rem;">This primes the model to access specific subsets of its training data.</p>
+      <div class="big-number">24</div>
+    </div>
+
+    <!-- Slide 25: Structured Prompt Framework -->
+    <div class="slide slide-25">
+      <h3>Technique 2</h3>
+      <h2>Structured Prompt Framework</h2>
+      <pre><code># ROLE
+You are an expert Python Developer.
+
+# CONTEXT
+I am a beginner trying to scrape a website.
+
+# REQUEST
+Write a script to scrape data from example.com.
+
+# CONSTRAINTS
+- Use BeautifulSoup4
+- Add comments explaining every step
+- Handle connection errors</code></pre>
+      <div class="big-number">25</div>
+    </div>
+
+    <!-- Slide 26: Analysis First -->
+    <div class="slide slide-26">
+      <h3>Technique 3</h3>
+      <h2>Analysis First, Prompt Second</h2>
+      <p>Don't ask for the output immediately. Ask for the plan first.</p>
+      <div class="two-col" style="margin-top: 2rem;">
+        <div>
+          <p class="mb-4">1. "Here is my idea. Analyze potential problems with it."</p>
+          <div style="font-size: 2rem; text-align: center;">⬇️</div>
+        </div>
+        <div>
+          <p class="mb-4">2. "Okay, now based on that analysis, write the actual content."</p>
+        </div>
+      </div>
+      <div class="big-number">26</div>
+    </div>
+
+    <!-- Slide 27: Style & Variations -->
+    <div class="slide slide-27">
+      <h3>Technique 4</h3>
+      <h2>Style & Variations</h2>
+      <p>Never settle for the first draft.</p>
+      <div class="highlight-box" style="margin-top: 1rem;">
+        <ul>
+          <li>"Give me 5 distinctive variations of this headline."</li>
+          <li>"Rewrite this to be more punchy and less formal."</li>
+          <li>"Explain the same concept in a poetic style."</li>
+        </ul>
+      </div>
+      <div class="big-number">27</div>
+    </div>
+
+    <!-- Slide 28: Follow-up Prompting -->
+    <div class="slide center-slide slide-28">
+      <h3>Technique 5</h3>
+      <h2>Follow-up Prompting</h2>
+      <p>The magic happens in the conversation.</p>
+      <div class="highlight-box" style="display: inline-block; text-align: left; margin-top: 2rem;">
+        <p>🗣️ "What else?"</p>
+        <p>🗣️ "Go deeper into point 3."</p>
+        <p>🗣️ "Are you sure? Critique your own answer."</p>
+      </div>
+      <div class="big-number">28</div>
+    </div>
+
+    <!-- Slide 29: Analyze My Style -->
+    <div class="slide slide-29">
+      <h3>Technique 6</h3>
+      <h2>"Analyze My Style"</h2>
+      <p>Teach AI to write like YOU.</p>
+      <div class="highlight-box">
+        <p style="margin-bottom: 1rem;"><strong>Step 1:</strong> Paste 3 of your previous emails/blogs.</p>
+        <p style="margin-bottom: 1rem;"><strong>Prompt:</strong> "Analyze the writing style, tone, and sentence
+          structure of these texts."</p>
+        <p style="margin-bottom: 1rem;"><strong>Step 2:</strong> "Now write a new email about [topic] using that exact
+          style."</p>
+      </div>
+      <div class="big-number">29</div>
+    </div>
+
+    <!-- Slide 30: Cursor Planning -->
+    <div class="slide slide-30">
+      <h3>For Coders</h3>
+      <h2>The "Cursor" Planning Hack</h2>
+      <p>For AI Coding Editors (Cursor, Windsurf, Copilot):</p>
+      <pre><code>Step 1: "Make a plan for [feature] in @file"
+
+Step 2: "Review the plan. If I missed edge cases, update it."
+
+Step 3: "Now execute the plan step-by-step."</code></pre>
+      <p style="margin-top: 1rem;">Reduces bugs by forcing the AI to "think" before "coding".</p>
+      <div class="big-number">30</div>
+    </div>
+
+    <!-- Slide 31: Section Divider - Parameters & Tools -->
+    <div class="slide center-slide section-title slide-31">
+      <div style="font-size: 6rem; margin-bottom: 1rem;">🔧</div>
+      <h2>Parameters & Tools</h2>
+      <p>Under the Hood</p>
+      <div class="big-number">31</div>
+    </div>
+
+    <!-- Slide 32: Understanding Parameters -->
+    <div class="slide slide-32">
+      <h3>Tech Specs</h3>
+      <h2>Understanding Parameters</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Temperature</strong></td>
+            <td>Creativity (0 = Robot, 1 = Poet). Low for code, High for stories.</td>
+          </tr>
+          <tr>
+            <td><strong>Reasoning</strong></td>
+            <td>Chain-of-thought (o1, R1). Slower but smarter.</td>
+          </tr>
+          <tr>
+            <td><strong>Web Search</strong></td>
+            <td>Connects to live internet. Turn on for news/facts.</td>
+          </tr>
+          <tr>
+            <td><strong>Context Window</strong></td>
+            <td>How much it "remembers" (e.g., 128k tokens).</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="big-number">32</div>
+    </div>
+
+    <!-- Slide: Token Hygiene (Don't waste tokens on simple tasks) -->
+    <div class="slide slide-tokens" data-reset-fragments="true">
+      <h3>Efficiency</h3>
+      <h2>Don’t Waste Tokens on Simple Tasks</h2>
+      <p style="max-width: 980px; opacity: 0.9;">
+        Rule of thumb: if it’s <strong>deterministic</strong> and you can code it fast, don’t prompt — just implement it.
+      </p>
+
+      <div class="two-col" style="margin-top: 1.75rem; text-align: left;">
+        <div class="highlight-box bg-red-900/20">
+          <h4 style="color:#fca5a5; margin-bottom: 0.75rem;">💸 Token-Waster</h4>
+          <p style="opacity:0.85; margin-bottom: 0.75rem;">Using AI like a calculator or a paintbrush…</p>
+          <pre style="margin: 0 0 0.75rem 0;"><code>ai.chatgpt({"2+2"})  // why</code></pre>
+          <pre style="margin: 0 0 0.75rem 0;"><code>"change button color to #22c55e"</code></pre>
+          <ul style="font-size: 1.05rem;">
+            <li>Slow + expensive for trivial work</li>
+            <li>More chances to “almost” do it right</li>
+          </ul>
+          <p style="margin-top: 0.6rem; opacity: 0.78; font-style: italic;">
+            If your backend needs an LLM for math… your calculator became a philosophy major.
+          </p>
+        </div>
+
+        <div class="highlight-box bg-green-900/20" style="border-color: rgba(74, 222, 128, 0.25);">
+          <h4 style="color:#4ade80; margin-bottom: 0.75rem;">✅ Token-Saver</h4>
+          <p style="opacity:0.85; margin-bottom: 0.75rem;">Save AI for the parts that are fuzzy, not fixed.</p>
+          <pre style="margin: 0 0 0.75rem 0;"><code>return 2 + 2;</code></pre>
+          <pre style="margin: 0 0 0.75rem 0;"><code>button.style.backgroundColor = "#22c55e";</code></pre>
+          <ul style="font-size: 1.05rem;">
+            <li>Use AI for ambiguity: requirements, copy, UX tradeoffs</li>
+            <li>Use AI for breadth: edge cases, tests, refactor plans</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="bottom-tip fragment">
+        “The best token is the one you didn’t spend.” 😄
+      </p>
+
+      <div class="big-number">TIP</div>
+    </div>
+
+    <!-- Slide 33: Section Divider - Closing -->
+    <div class="slide center-slide section-title slide-33">
+      <div style="font-size: 6rem; margin-bottom: 1rem;">🎯</div>
+      <h2>Closing</h2>
+      <div class="big-number">33</div>
+    </div>
+
+    <!-- Slide 34: Final Philosophy -->
+    <div class="slide center-slide slide-34">
+      <h3>Core Message</h3>
+      <h2 style="font-size: 3rem;">"I don't need to know <span class="text-accent">HOW</span>...<br>I only need to know
+        <span class="text-primary">WHAT</span> I want."
+      </h2>
+      <p style="margin-top: 3rem; max-width: 800px;">Prompt Engineering is about defining the
+        <strong>vision</strong>.<br>AI handles the <strong>execution</strong>.
+      </p>
+      <div class="big-number">34</div>
+    </div>
+
+    <!-- Slide 35: Thank You -->
+    <div class="slide center-slide slide-35">
+      <h1 style="font-size: 6rem;">Thank You</h1>
+      <p style="margin-top: 1rem; font-size: 1.5rem;">The Future is Prompted.</p>
+      <div style="margin-top: 4rem;">
+        <p>Any Questions?</p>
+      </div>
+      <div class="big-number">35</div>
+    </div>
+
+    <div class="controls">
+      <button class="control-btn" id="prevBtn" title="Previous Slide">←</button>
+      <button class="control-btn" id="nextBtn" title="Next Slide">→</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
