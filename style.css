@@ -698,7 +698,7 @@ body {
 .slide-tokens {
     justify-content: flex-start;
     padding-top: 50px;
-    padding-bottom: 110px; /* reserve space for footer quote */
+    padding-bottom: 60px;
     background-image:
         radial-gradient(circle at 20% 25%, rgba(34, 197, 94, 0.10) 0%, transparent 48%),
         radial-gradient(circle at 80% 30%, rgba(248, 113, 113, 0.10) 0%, transparent 52%),
@@ -720,15 +720,10 @@ body {
 .slide-tokens .two-col {
     align-items: start;
     gap: 28px;
-    margin-bottom: 48px; /* extra breathing room above footer quote */
 }
 
 .slide-tokens .highlight-box {
     padding: 1.35rem;
-}
-
-.slide-tokens li {
-    margin-bottom: 0.65rem;
 }
 
 .slide-tokens pre {
@@ -737,13 +732,6 @@ body {
 
 .slide-tokens pre code {
     font-size: 0.9rem;
-}
-
-/* Keep the slide footer quote visible but out of the way of the two columns */
-.slide-tokens .bottom-tip {
-    bottom: 32px;
-    font-size: 1.1rem;
-    opacity: 0.8;
 }
 
 .slide-33 {

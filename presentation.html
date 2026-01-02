@@ -671,39 +671,33 @@ Step 3: "Now execute the plan step-by-step."</code></pre>
       <h3>Efficiency</h3>
       <h2>Don’t Waste Tokens on Simple Tasks</h2>
       <p style="max-width: 980px; opacity: 0.9;">
-        Rule of thumb: if it’s <strong>deterministic</strong> and you can code it fast, don’t prompt — just implement it.
+        <strong>Don’t use a sword to cut a tomato</strong> — AI is for complex problems, not simple ones.
+      </p>
+      <p style="max-width: 980px; opacity: 0.85; margin-top: 0.5rem;">
+        Nowadays, some people build a <strong>calculator</strong> that calls ChatGPT for arithmetic.
       </p>
 
-      <div class="two-col" style="margin-top: 1.75rem; text-align: left;">
+      <div class="two-col" style="margin-top: 1.5rem; text-align: left;">
         <div class="highlight-box bg-red-900/20">
           <h4 style="color:#fca5a5; margin-bottom: 0.75rem;">💸 Token-Waster</h4>
-          <p style="opacity:0.85; margin-bottom: 0.75rem;">Using AI like a calculator or a paintbrush…</p>
-          <pre style="margin: 0 0 0.75rem 0;"><code>ai.chatgpt({"2+2"})  // why</code></pre>
-          <pre style="margin: 0 0 0.75rem 0;"><code>"change button color to #22c55e"</code></pre>
-          <ul style="font-size: 1.05rem;">
-            <li>Slow + expensive for trivial work</li>
-            <li>More chances to “almost” do it right</li>
-          </ul>
-          <p style="margin-top: 0.6rem; opacity: 0.78; font-style: italic;">
-            If your backend needs an LLM for math… your calculator became a philosophy major.
+          <p style="opacity:0.85; margin-bottom: 0.75rem;">LLM Calculator Backend</p>
+          <pre style="margin: 0 0 0.75rem 0;"><code>ai.chatgpt({"2+2"})</code></pre>
+          <pre style="margin: 0;"><code>"change button color to #22c55e"</code></pre>
+          <p style="margin-top: 0.75rem; opacity: 0.75; font-style: italic;">
+            Paying tokens to do math.
           </p>
         </div>
 
         <div class="highlight-box bg-green-900/20" style="border-color: rgba(74, 222, 128, 0.25);">
           <h4 style="color:#4ade80; margin-bottom: 0.75rem;">✅ Token-Saver</h4>
-          <p style="opacity:0.85; margin-bottom: 0.75rem;">Save AI for the parts that are fuzzy, not fixed.</p>
-          <pre style="margin: 0 0 0.75rem 0;"><code>return 2 + 2;</code></pre>
-          <pre style="margin: 0 0 0.75rem 0;"><code>button.style.backgroundColor = "#22c55e";</code></pre>
-          <ul style="font-size: 1.05rem;">
-            <li>Use AI for ambiguity: requirements, copy, UX tradeoffs</li>
-            <li>Use AI for breadth: edge cases, tests, refactor plans</li>
-          </ul>
+          <p style="opacity:0.85; margin-bottom: 0.75rem;">Deterministic Code</p>
+          <pre style="margin: 0 0 0.75rem 0;"><code>return 2 + 2; // 4</code></pre>
+          <pre style="margin: 0;"><code>button.style.backgroundColor = "#22c55e";</code></pre>
+          <p style="margin-top: 0.75rem; opacity: 0.75; font-style: italic;">
+            Save AI for the fuzzy parts.
+          </p>
         </div>
       </div>
-
-      <p class="bottom-tip fragment">
-        “The best token is the one you didn’t spend.” 😄
-      </p>
 
       <div class="big-number">TIP</div>
     </div>
