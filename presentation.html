@@ -493,13 +493,29 @@
     <div class="slide slide-20">
       <h3>Rule 4</h3>
       <h2>Use STRICT / ONLY</h2>
-      <p>When requirements are non-negotiable, use capital letters for emphasis.</p>
-      <div class="two-col" style="margin-top: 2rem;">
+      <p>When requirements are non-negotiable, use <strong>keywords</strong> to make constraints explicit.</p>
+
+      <div class="two-col" style="margin-top: 1.5rem; text-align: left;">
         <div class="highlight-box">
-          <p>"STRICTLY do not use emojis."</p>
+          <h4 style="margin-bottom: 0.75rem; color:#fff;">Keywords</h4>
+          <ul style="font-size: 1.05rem;">
+            <li><strong>IDENTITY_LOCK</strong></li>
+            <li><strong>PRIORITY</strong></li>
+            <li><strong>PRESERVE</strong></li>
+            <li><strong>EXCLUDE</strong></li>
+            <li><strong>STRICT</strong></li>
+            <li><strong>ONLY</strong></li>
+          </ul>
         </div>
-        <div class="highlight-box">
-          <p>"Output ONLY the code. No explanation."</p>
+
+        <div class="highlight-box" style="border-color: rgba(236, 72, 153, 0.25);">
+          <h4 style="margin-bottom: 0.75rem; color:#fff;">Examples</h4>
+          <pre style="margin: 0 0 0.75rem 0;"><code>IDENTITY_LOCK: keep face/identity exactly the same
+PRESERVE: background
+ONLY: pose</code></pre>
+          <pre style="margin: 0 0 0.75rem 0;"><code>PRIORITY: identity & outfit over everything else
+EXCLUDE: text, borders, watermarks, artifacts</code></pre>
+          <pre style="margin: 0;"><code>STRICT: no changes allowed except ONLY: lighting</code></pre>
         </div>
       </div>
       <div class="big-number">20</div>
