@@ -362,9 +362,8 @@ body {
 }
 
 .slide-7 {
-    background-image:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.72) 100%),
-        url('assets/slide7_bg.png');
+    /* Full-strength background image (no dark overlay) */
+    background-image: url('assets/slide7_bg.png');
 }
 
 .bottom-quote,
