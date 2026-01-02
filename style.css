@@ -986,6 +986,53 @@ tr:last-child td {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    position: relative; /* anchor overlay images */
+    align-items: start;
+}
+
+.slide-6 .bad-good-comparison {
+    margin-top: 28px;
+    /* Make room so the revealed images can fill the left/right halves like a “full panel” */
+    height: 520px;
+}
+
+.prompt-overlays {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.prompt-overlay-panel {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.22);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prompt-overlay-panel.bad {
+    outline: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+.prompt-overlay-panel.good {
+    outline: 1px solid rgba(74, 222, 128, 0.22);
+}
+
+.prompt-overlay-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fill the full panel like the reference */
+    background: #000;
 }
 
 .bg-red-900\/20 {
