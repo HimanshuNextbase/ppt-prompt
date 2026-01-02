@@ -615,36 +615,39 @@ Write a script to scrape data from example.com.
       <div class="big-number">26</div>
     </div>
 
-    <!-- Slide 27: Style & Variations -->
+    <!-- Slide 27: The Prompt Builder -->
     <div class="slide slide-27">
       <h3>Technique 4</h3>
-      <h2>Values of Iteration</h2>
-      <p style="font-size: 1.4rem; max-width: 1000px; margin-bottom: 0.5rem; color: #d1d5db;">Prompting is a loop of trial & error. If one angle doesn't work, pivot to another.</p>
+      <h2>The "Prompt Builder" Pattern</h2>
+      <p>Don't just ask for variations. <strong>Architect</strong> them.</p>
 
-      <div class="three-col-cards">
-        <!-- Angle 1 -->
-        <div class="angle-card fragment">
-          <div class="angle-icon">📐</div>
-          <div class="angle-title">The Logic Angle</div>
-          <p class="angle-text">Direct, step-by-step instructions. <br>Best for code & data.</p>
-          <div class="angle-example">"Solve this step-by-step..."</div>
+      <div class="two-col" style="margin-top: 1.5rem; align-items: stretch;">
+
+        <!-- The Problem -->
+        <div class="highlight-box" style="display: flex; flex-direction: column; justify-content: flex-start; border-color: rgba(255,100,100,0.3);">
+          <h4 style="color: #fca5a5; margin-bottom: 0.75rem;">❌ The "Lazy" Prompt</h4>
+          <p style="font-family: monospace; font-size: 0.85rem; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
+            "Write 10 different text-to-image prompts for a Pokemon Trainer."
+          </p>
+          <p style="font-size: 0.9rem; opacity: 0.8; margin-top: auto;">
+            <strong>Result:</strong> 10 generic clones. <br>The AI interprets "variation" very loosely.
+          </p>
         </div>
 
-        <!-- Angle 2 -->
-        <div class="angle-card fragment" style="transition-delay: 100ms;">
-          <div class="angle-icon">🎨</div>
-          <div class="angle-title">The Creative Angle</div>
-          <p class="angle-text">Using metaphors and vibes. <br>Best for writing & art.</p>
-          <div class="angle-example">"Explain APIs using a restaurant metaphor..."</div>
+        <!-- The Solution -->
+        <div class="highlight-box" style="border-color: #6ee7b7; background: rgba(16, 185, 129, 0.1); display: flex; flex-direction: column; justify-content: flex-start;">
+          <h4 style="color: #6ee7b7; margin-bottom: 0.75rem;">✅ The "Builder" Meta-Prompt</h4>
+          <p style="font-family: monospace; font-size: 0.75rem; text-align: left; background: rgba(0,0,0,0.3); padding: 0.75rem; border-radius: 6px; margin-bottom: 1rem;">
+            "Act as an expert. Infer constraints from {KEYWORD}.<br>
+            Generate 10 self-contained prompts.<br>
+            For each, <strong>dynamically select a variation axis</strong> (e.g. Angle, Era, Region).<br>
+            PRESERVE: Core intent."
+          </p>
+          <p style="font-size: 0.9rem; opacity: 1; margin-top: auto;">
+            <strong>Result:</strong> Structured diversity.<br>Maintains the subject while forcing distinct styles.
+          </p>
         </div>
 
-        <!-- Angle 3 -->
-        <div class="angle-card fragment" style="transition-delay: 200ms;">
-          <div class="angle-icon">🎭</div>
-          <div class="angle-title">The Persona Angle</div>
-          <p class="angle-text">Adopting a specific expert voice. <br>Best for specific advice.</p>
-          <div class="angle-example">"Act as a cynical editor..."</div>
-        </div>
       </div>
       <div class="big-number">27</div>
     </div>
